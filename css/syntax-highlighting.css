@@ -7,7 +7,9 @@
 }
 .highlighter-rouge {
     background: #393939;
-    padding: 2px;
+    padding: 2px 4px 0 4px;
+    border: 1px solid #717171;
+    border-radius: 6px;
 }
 .highlight .c {
     color: #998;
