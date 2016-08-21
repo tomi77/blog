@@ -1,0 +1,40 @@
+---
+---
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="/css/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="/css/github-dark.css" media="screen">
+
+    <title>{{ site.title | xml_escape }}</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1><a href="{{ " / " | prepend: site.baseurl }}">{{ site.title | xml_escape }}</a></h1>
+            <h2></h2>
+
+            <section id="downloads">
+                <a href="https://github.com/tomi77/tomi77.github.io/" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+            </section>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="main_content">
+            {{ content }}
+        </section>
+    </div>
+
+
+</body>
+
+</html>
+
+</div>
