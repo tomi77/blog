@@ -50,3 +50,7 @@ Add `docs/index.html` file:
 
 </html>
 {% endhighlight %}
+
+#### Step 7
+
+Go to GitHub project page. Select `Settings` tab. On `GitHub Pages` section set `Source` to `master branch /docs folder`.
