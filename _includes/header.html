@@ -1,6 +1,20 @@
+{% assign post = page %}
+{% if post.tags.size > 0 %}
+  {% capture tags_content %}{% if post.tags.size == 1 %}<i class="fa fa-tag"></i>{% else %}<i class="fa fa-tags"></i>{% endif %}&nbsp;{% endcapture %}
+  {% for post_tag in post.tags %}
+      {% assign tag = site.data.tags[post_tag] %}
+      {% if tag %}
+          {% capture tags_content_temp %}{{ tags_content }}<a href="/tag/{{ post_tag }}/" class="btn">{{ tag.name }}</a>{% if forloop.last == false %}&nbsp;{% endif %}{% endcapture %}
+          {% assign tags_content = tags_content_temp %}
+      {% endif %}
+  {% endfor %}
+{% else %}
+  {% assign tags_content = '' %}
+{% endif %}
 <header>
     <div class="container">
         <h1><a href="{{ "/" | prepend: site.baseurl }}">{{ site.title | escape }}</a></h1>
         <h2>{{ page.title | escape }}</h2>
+        <p id="post-meta">{{ tags_content }}</p>
     </div>
 </header>
