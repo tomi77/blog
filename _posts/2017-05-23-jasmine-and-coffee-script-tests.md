@@ -19,19 +19,17 @@ Initialize `jasmine`:
 Instruct `jasmine` to use `coffee-script` files. Edit `spec/support/jasmine.json` `spec_files` config option:
 
 {% highlight json %}
-  …
-  "spec_files": ["**/*[sS]pec.coffee"],
-  …
+{
+  "spec_files": ["**/*[sS]pec.coffee"]
+}
 {% endhighlight %}
 
 Add `test` script to `package.json`:
 
 {% highlight json %}
-  …
+{
   "scripts": {
-    …
-    "test": "node --require coffee-script/register ./node_modules/.bin/jasmine",
-    …
-  },
-  …
+    "test": "node --require coffee-script/register ./node_modules/.bin/jasmine"
+  }
+}
 {% endhighlight %}
