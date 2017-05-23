@@ -2,3 +2,9 @@ github-pages:
   name: GitHub Pages
 sphinx:
   name: Sphinx
+jasmine:
+  name: Jasmine
+coffee-script:
+  name: Coffee-Script
+tdd:
+  name: TDD
